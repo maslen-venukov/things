@@ -8,7 +8,7 @@ runningNumbers.forEach((el) => {
   let oneStepTime = Math.round(time/(num/step));
 
   const interval = setInterval(() => {
-    originalNum += parseInt(step);
+    step != 0 ? originalNum += parseInt(step) : originalNum += parseInt(1);
     if(originalNum >= num) {
       clearInterval(interval);
       if(originalNum !== num) originalNum = num;
